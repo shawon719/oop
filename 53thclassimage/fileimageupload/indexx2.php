@@ -13,8 +13,11 @@ echo "</pre>";
         var_dump($size);
         var_dump($type);
         $img="image/";
+
         $kb=$size/1024;
-        echo  "kb:".$kb;
+
+
+        //echo  "kb:".$kb;
 
         if($kb>400 && $type=="png"){
             echo "file is too large and not png file.";

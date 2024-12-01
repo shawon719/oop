@@ -2,7 +2,7 @@
     if(isset($_POST["btnSubmit"])){
         $filename=$_FILES["my_file"]["name"];
        $temp_file=$_FILES["my_file"]["tmp_name"];
-       // var_dump($filename);
+        var_dump($filename);
        
        $img="image/";
        if(!empty($filename)){
@@ -23,13 +23,13 @@
     <title>image upload</title>
 </head>
 <body>
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="#" method="post" enctype="multipart/form-data">
         <input type="file" name="my_file" id="">
         <input type="submit" name="btnSubmit" value="submit" id="">
     </form>
     <?php
         if(isset($_POST["btnSubmit"])){
-                echo "<img src='$img.$filename' alt='bung'>";
+                echo "<img src='$img.$filename' alt='bung' width='300px'>";
         }
         
     ?>
