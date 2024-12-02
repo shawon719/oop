@@ -4,19 +4,20 @@
          $username=$_POST["txtusername"];
          $password=$_POST["txtpassword"];
          $email=$_POST["txtemail"];
-         $a="/^[a-zA-Z0-9]+@+\.[a-zA-Z]{2,}$/";
-         if(preg_match($a,$email)){
-            echo "email valid.";
-         }else{
-            echo "not valid.";
-         }
+         //$a="/^[a-zA-Z0-9._%-+]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/";
+         //if(preg_match($a,$email)){
+          //  echo "email valid.";
+        //  }else{
+        //     echo "not valid.";
+        //  }
+        //}
         if($username=="shawon" && $password=="123"){
             $_SESSION["sname"]=$username;
              header("location:demo.php");
         }
         else{
             $m="username and password are incorrect!!!!!!!!!!";
-        }
+        }    
     }
 ?>
 <!DOCTYPE html>
@@ -44,7 +45,7 @@
             </tr>
             <tr>
                 <th>Email:</th>
-                <th><input type="email" name="txtemail" ></th>
+                <th><input type="text" name="txtemail" ></th>
             </tr>
         </table>
             <input type="submit" name="btn"  value="Log in" id="">
