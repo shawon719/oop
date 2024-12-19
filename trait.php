@@ -5,7 +5,7 @@
         }
     }
     trait Main2{
-        public function infoo(){
+        public function infooo(){
             echo "this is second trait"."<br>";
         }
         public function display(){
